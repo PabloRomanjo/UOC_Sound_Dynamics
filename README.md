@@ -41,7 +41,7 @@ El repositorio se divide en **diferentes carpetas con archivos planos de python*
   + **active_artists()**: Recibe un dataframe incluyendo tracks, artists y albums y una década. Devuelve una lista de artistas en activo desde la década indicada.
 
 
-+ **Carpeta 'audio_features'**: Incluye tres archivos planos, llamados accessory_funcions.py, compare.py y stats.py. Estos archivos incluyen las **funciones para tratar datos sobre audio features y resolver las tareas 4, 5, 6 y 7**.:
++ **Carpeta 'audio_features'**: Incluye tres archivos planos, llamados accessory_funcions.py, compare.py y stats.py. Estos archivos incluyen las **funciones para tratar datos sobre audio features y resolver las tareas 4, 5, 6 y 7**:
   + **minmaxmean()**: Calcular el mínimo, la media y el máximo de una feature elegida para el artista indicado en el parámetro 'artist'.
   + **plot_album()**: Calcula la media de la característica deseada de un artista y genera un histograma para visualizar el resultado.
   + **density_feature_artist()**: Genera un histograma de densidad de probabilidad de una característica para las canciones de un artista determinado.
