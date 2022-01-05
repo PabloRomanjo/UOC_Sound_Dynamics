@@ -2,7 +2,7 @@ import polars as pl
 
 
 def get_column_polars(file, column):
-    """Lee de una columna usando polars y la
+    """Lee una columna usando polars y la
     almacena en una lista.
 
     :param file: Ruta de archivo cvs separado por ";"
