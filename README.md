@@ -2,17 +2,17 @@
 
 Repositorio correspondiente a la PEC4 de Programación para la Ciencia de Datos (Master en Ciencia de Datos, UOC). Disponible en GitHub desde [aquí](https://github.com/PabloRomanjo/UOC_Sound_Dynamics).
 
-# Autor
+## Autor
 
 [Pablo Román-Naranjo Varela](https://es.linkedin.com/in/pablo-rom%C3%A1n-naranjo-varela-22741860)
 
-# Introducción
+## Introducción
 
 Se nos pide realizar un proyecto cuya finalidad es crear una **aplicación para descubrir artistas musicales**. El proyecto se encuentra en una fase inicial dónde se deben analizar los datos existentes. Para ello se debe crear un paquete de Python que lea los datos, los prepare para el análisis, calcule algunas estadísticas básicas y finalmente, cree visualizaciones para comparar diferentes artistas.
 
 Los datos que se utilizaran en el análisis contienen **información sobre canciones, sobre los álbumes que las contienen y sobre los artistas** que las han creado. A parte de detalles básicos como por ejemplo, el nombre de los artistas o el título de las canciones, los datos más interesantes que serán la base del análisis son las **audio features** que nos proporciona Spotify.
 
-# El repositorio
+## El repositorio
 
 El repositorio se divide en **diferentes carpetas con archivos planos de python**. Estos archivos incluyen diferentes funciones que **se invocan desde el archivo main.py para obtener los resultados pedidos por la PEC4**. Los ficheros y funciones se han dividido en diferentes carpetas:
 
@@ -51,8 +51,25 @@ El repositorio se divide en **diferentes carpetas con archivos planos de python*
   
 + **Carpeta 'Extra'**: Incluye un archivo plano, llamado apidb.py, que contiene una función llamada **api_selected_artist()** para resolver la **tarea 8** (opcional). Esta función extrae los datos de la api de AudioDB de los artistas incluidos en la lista introducida. Se genera un dataset con los datos de artist_name, formed_year, country.
 
+## Antes de comenzar
 
+Antes de ejecutar el código, será necesario instalar las dependencias necesarias especificadas en el archivo requirements.txt
 
+```
+pip install -r requirements.txt
+```
+
+## Ejecución
+
+Para ejecutar la herramienta deberá clonar o descargar como zip y descomprimir este repositorio. Una vez hecho esto, podrá obtener las respuestas a la PEC de la siguiente manera:
+
+```
+pithon3 main.py
+```
+
+## Licencia
+Este proyecto y los datasets derivados son publicados bajo licencia CC BY-NC-SA 4.0. [Más info](https://github.com/avicenteg/euraxess_scraping/blob/master/LICENSE.md)
+This project and all the datasets derived from it are realesed under CC BY-NC-SA 4.0 License. [See more](https://github.com/PabloRomanjo/UOC_Sound_Dynamics/blob/main/LICENSE.md)
 
 
 
