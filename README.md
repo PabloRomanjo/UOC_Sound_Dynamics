@@ -1,6 +1,6 @@
 # Proyecto UOC Sound Dynamics
 
-Repositorio correspondiente a la PEC4 de Programación para la Ciencia de Datos (Master en Ciencia de Datos, UOC)
+Repositorio correspondiente a la PEC4 de Programación para la Ciencia de Datos (Master en Ciencia de Datos, UOC). Disponible en GitHub desde [aquí](https://github.com/PabloRomanjo/UOC_Sound_Dynamics).
 
 # Autor
 
