@@ -4,7 +4,7 @@ import pandas as pd
 def artist_capitalize(artists_file):
     """Nombre en mayúsculas
 
-    :param artists_file: Archivo csv que contiene una colunma 'name'
+    :param artists_file: Dataframe de archivo csv que contiene una colunma 'name'
     :return: Devuelve la columna 'name' con cada palabra del nombre
     en mayúsculas
     """
