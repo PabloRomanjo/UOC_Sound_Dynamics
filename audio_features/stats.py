@@ -4,8 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 available_features = ['energy', 'key', 'loudness', 'mode', 'speechiness',
-                      'acousticness', 'instrumentalness', 'liveness', 'valence',
-                      'tempo', 'time_signature', 'danceability']
+                      'acousticness', 'instrumentalness', 'liveness',
+                      'valence', 'tempo', 'time_signature', 'danceability']
 save_path = "./figures/"
 
 
@@ -24,11 +24,18 @@ def minmaxmean(df, feature, artist):
         min_feature = min(feature_values)
         max_feature = max(feature_values)
         mean_feature = statistics.mean(feature_values)
-        return print(" Min {} value in {}'s tracks: {}\n".format(feature, artist, min_feature),
-                     "Max {} value in {}'s tracks: {}\n".format(feature, artist, max_feature),
-                     "Mean {} value in {}'s tracks: {}\n".format(feature, artist, mean_feature))
+        return print(" Min {} value in {}'s tracks: {}\n".format(feature,
+                                                                 artist,
+                                                                 min_feature),
+                     "Max {} value in {}'s tracks: {}\n".format(feature,
+                                                                artist,
+                                                                max_feature),
+                     "Mean {} value in {}'s tracks: {}\n".format(feature,
+                                                                 artist,
+                                                                 mean_feature))
     else:
-        return print("Please, select an audio feature from the list:", available_features)
+        return print("Please, select an audio feature from the list:",
+                     available_features)
 
 
 def plot_album(df, feature, artist):
@@ -50,14 +57,16 @@ def plot_album(df, feature, artist):
             means.append(statistics.mean(values))
         result = pd.DataFrame({'albums': albums, feature: means})
         sns.barplot(x=means, y=albums, data=result,
-                    orient='h').set_title("{}'s albums: Mean {} ".format(artist, feature))
+                    orient='h').\
+            set_title("{}'s albums: Mean {} ".format(artist, feature))
         plt.xlabel('mean {}'.format(feature))
         figure = plt.gcf()  # get current figure
         figure.set_size_inches(20, 20)
         plt.savefig(save_path + "{}_{}_albums.png".format(artist, feature))
         return plt.show()
     else:
-        return print("Please, select an audio feature from the list:", available_features)
+        return print("Please, select an audio feature from the list:",
+                     available_features)
 
 
 def density_feature_artist(df, feature, artist):
@@ -72,11 +81,13 @@ def density_feature_artist(df, feature, artist):
 
     if feature in available_features:
         subdf = df[df['artist_name'] == artist][['name', feature]]
-        plot_dens = sns.displot(subdf[feature], bins=20, stat="probability", color="lightblue")
+        plot_dens = sns.displot(subdf[feature], bins=20,
+                                stat="probability", color="lightblue")
         plot_dens.set(title="{} tracks' {}".format(artist, feature))
         figure = plt.gcf()
         figure.set_size_inches(10, 10)
         plt.savefig(save_path + "{}_{}_density.png".format(artist, feature))
         return plt.show()
     else:
-        return print("Please, select an audio feature from the list:", available_features)
+        return print("Please, select an audio feature from the list:",
+                     available_features)
