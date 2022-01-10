@@ -20,7 +20,8 @@ def main():
     # capitalize artists names
     pp.artist_capitalize(artists_file)
     # tracks popularity: fill NA values with mean
-    print("Corrected 'popularity' NA values: {}".format(pp.mean_pop(tracks_file)))
+    corrected = pp.mean_pop(tracks_file)
+    print("Corrected 'popularity' NA values: {}".format(corrected))
     # rename albums_file and artist_file dataframe
     pp.rename_columns(albums_file)
     pp.rename_columns(artists_file)
@@ -64,7 +65,8 @@ def main():
     tarea8 = api_selected_artist(["Radiohead", "David Bowie", "Måneskin"])
     print(tarea8)
     print("Generando el dataset artists_audiodb.csv...")
-    artist_audio_db = api_selected_artist(list(set(artists_file['artist_name'])))
+    list_of_artists = list(set(artists_file['artist_name']))
+    artist_audio_db = api_selected_artist(list_of_artists)
     print("Guardando el dataset en carpeta data...")
     artist_audio_db.to_csv("data/artists_audiodb.csv")
     print("¡Dataset guardado!")

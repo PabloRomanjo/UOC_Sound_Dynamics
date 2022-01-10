@@ -49,7 +49,7 @@ El repositorio se divide en **diferentes carpetas con archivos planos de python*
   + **comp_2artist_feat()**: Compara dos artistas de acuerdo a una característica de audio (audio feature). Representa un histograma que muestra la densidad de probabilidad para ambos artistas.
   + **similarities()**: Calcula la distancia Euclidea o Cosine entre los vectores de diferentes artistas según el valor del parámetro 'method'. Estos vectores incluyen la media de los características de audio del artista. Se devuleve un heatmap para la visualizar la distancia entre los artistas.
   
-+ **Carpeta 'Extra'**: Incluye un archivo plano, llamado apidb.py, que contiene una función llamada **api_selected_artist()** para resolver la **tarea 8** (opcional). Esta función extrae los datos de la api de AudioDB de los artistas incluidos en la lista introducida. Se genera un dataset con los datos de artist_name, formed_year, country.
++ **Carpeta 'Extra'**: Incluye un archivo plano, llamado apidb.py, que contiene una función llamada **api_selected_artist()** para resolver la **tarea 8** (opcional). Esta función extrae los datos de la api de AudioDB de los artistas incluidos en la lista introducida. Se genera un dataset con los datos de artist_name, formed_year, country. **Opino que la implementación de esta función es eficiente**, ya que, aunque se podría paralelizar, las restricciones de peticiones de la api de AudioDB impiden que el proceso sea más rápido. De hecho, para que esta restricción no ocurra, la función implementada tiene un **tiempo de espera (sleep) de tres segundos entre cada petición**. 
 
 ## Antes de comenzar
 
@@ -64,12 +64,8 @@ pip install -r requirements.txt
 Para ejecutar la herramienta deberá clonar o descargar como zip y descomprimir este repositorio. Una vez hecho esto, podrá obtener las respuestas a la PEC de la siguiente manera:
 
 ```
-pithon3 main.py
+python3 main.py
 ```
 
 ## Licencia
-Este proyecto y los datasets derivados son publicados bajo licencia CC BY-NC-SA 4.0. [Más info](https://github.com/avicenteg/euraxess_scraping/blob/master/LICENSE.md)
-This project and all the datasets derived from it are realesed under CC BY-NC-SA 4.0 License. [See more](https://github.com/PabloRomanjo/UOC_Sound_Dynamics/blob/main/LICENSE.md)
-
-
-
+Este proyecto y los datasets derivados son publicados bajo licencia CC BY-NC-SA 4.0. [Más info](https://github.com/PabloRomanjo/UOC_Sound_Dynamics/blob/main/LICENSE.md)
