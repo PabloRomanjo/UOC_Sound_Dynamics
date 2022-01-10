@@ -29,7 +29,8 @@ def api_selected_artist(artists):
             pass
         else:
             response_to_dict = api_json["artists"][0]
-            data.append([response_to_dict["strArtist"], response_to_dict["intFormedYear"],
+            data.append([response_to_dict["strArtist"],
+                         response_to_dict["intFormedYear"],
                          response_to_dict["strCountry"]])
         time.sleep(3)
     df = pd.DataFrame(data)
