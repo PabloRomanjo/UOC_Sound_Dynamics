@@ -4,7 +4,7 @@ import pandas as pd
 def artist_capitalize(artists_file):
     """Nombre en mayúsculas
 
-    :param artists_file: Dataframe de archivo csv que contiene una colunma 'name'
+    :param artists_file: Archivo csv que contiene una colunma 'name'
     :return: Devuelve la columna 'name' con cada palabra del nombre
     en mayúsculas
     """
@@ -38,9 +38,11 @@ def rename_columns(df):
     prefix_artist = {"name", "popularity", "followers", "total_albums"}
     prefix_album = {"name", "popularity", "release_year", "total_tracks"}
     if "total_tracks" in df.columns:
-        df.rename(columns={col: 'album_' + col for col in prefix_album}, inplace=True)
+        df.rename(columns={col: 'album_' + col for col in prefix_album},
+                  inplace=True)
     elif "followers" in df.columns:
-        df.rename(columns={col: 'artist_' + col for col in prefix_artist}, inplace=True)
+        df.rename(columns={col: 'artist_' + col for col in prefix_artist},
+                  inplace=True)
     return None
 
 
